@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <!-- <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    /> -->
+
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./query.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+
+    </style> -->
+  </head>
+  <body class="flex">
+    <main class="main-container flex">
+      <div class="container">
+        <!-- ------ -->
+        <!-- CARD 1 -->
+        <!-- ------ -->
+        <div class="container-summary container-summary__score">
+          <h3 class="margin-b__m">Your Result</h3>
+          <div class="circle flex margin-b__m">
+            <p class="circle-number">76</p>
+            <p>of 100</p>
+          </div>
+          <p class="note margin-b__s">Great</p>
+          <p>
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+        <!-- ------ -->
+        <!-- CARD 2 -->
+        <!-- ------ -->
+        <div class="container-summary container-summary__desc">
+          <h3 class="margin-b__m">Summary</h3>
+          <div class="margin-b__b">
+            <div class="summary-desc__box flex box-1">
+              <p class="summary-desc__skill">Reaction</p>
+              <p class="summary-desc__score"><strong>80</strong> / 100</p>
+            </div>
+            <div class="summary-desc__box flex box-2">
+              <p class="summary-desc__skill">Memory</p>
+              <p class="summary-desc__score"><strong>92</strong> / 100</p>
+            </div>
+            <div class="summary-desc__box flex box-3">
+              <p class="summary-desc__skill">Verbal</p>
+              <p class="summary-desc__score"><strong>61</strong> / 100</p>
+            </div>
+            <div class="summary-desc__box flex box-4">
+              <p class="summary-desc__skill">Visual</p>
+              <p class="summary-desc__score"><strong>72</strong> / 100</p>
+            </div>
+          </div>
+          <button>Continue</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>

@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-text-2);
+
+  height: 100vh;
+}
+
+/* ////////////////// */
+/* variables */
+/* ////////////////// */
+
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-red: hsl(0, 100%, 67%);
+  --color-bg-red: hsl(0, 100%, 67%, 0.2);
+  --color-yellow: hsl(39, 100%, 56%);
+  --color-bg-yellow: hsla(39, 100%, 56%, 0.2);
+  --color-green: hsl(166, 100%, 37%);
+  --color-bg-green: hsl(166, 100%, 37%, 0.2);
+  --color-blue: hsl(234, 85%, 45%);
+  --color-bg-blue: hsl(234, 85%, 45%, 0.2);
+
+  --color-text-1: hsl(224, 30%, 27%);
+  --color-text-2: hsl(221, 100%, 96%);
+}
+
+/* ////////////////// */
+/* CONTAINERS */
+/* ////////////////// */
+
+.main-container {
+  width: 144rem;
+  height: 80%;
+  background-color: var(--color-white);
+  box-shadow: 0.1rem 0.5rem 1rem 0.2rem hsla(0, 0%, 0%, 0.1);
+}
+
+.container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  height: max-content;
+  border-radius: 3rem;
+  overflow: hidden;
+  box-shadow: 0.1rem 0.5rem 1rem 0.2rem hsla(0, 0%, 0%, 0.1);
+}
+
+.container-summary {
+  width: 30rem;
+  height: 100%rem;
+  padding: 4rem;
+}
+
+/* GENERAL */
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.margin-b__b {
+  margin-bottom: 3rem !important;
+}
+.margin-b__m {
+  margin-bottom: 2rem !important;
+}
+.margin-b__s {
+  margin-bottom: 1rem !important;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  text-align: center;
+  /* color: var(--color-text-2); */
+}
+
+/* ////////////////// */
+/* CARD 1 */
+/* ////////////////// */
+
+.container-summary__score {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 3rem;
+  overflow: hidden;
+}
+
+.container-summary__score h3 {
+  font-weight: 500;
+  text-align: center;
+  /* color: var(--color-text-2); */
+}
+
+.circle {
+  flex-direction: column;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  margin: 0 auto;
+}
+
+.circle-number {
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.note {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+/* ////////////////// */
+/* CARD 2 */
+/* ////////////////// */
+
+.container-summary__desc {
+  background-color: var(--color-white);
+}
+
+.container-summary__desc h3 {
+  font-weight: 800;
+  color: var(--color-text-1);
+}
+
+.summary-desc__box {
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.6rem;
+}
+
+.summary-skill {
+  font-weight: 500;
+}
+.summary-desc__score {
+  color: var(--color-text-1);
+}
+
+.box-1 {
+  background-color: var(--color-bg-red);
+  color: var(--color-red);
+}
+.box-2 {
+  background-color: var(--color-bg-yellow);
+  color: var(--color-yellow);
+}
+.box-3 {
+  background-color: var(--color-bg-green);
+  color: var(--color-green);
+}
+.box-4 {
+  background-color: var(--color-bg-blue);
+  color: var(--color-blue);
+}
+
+.summary-desc__skill::before {
+  content: url(`${icon}`);
+}
+
+button {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: var(--color-text-1);
+  width: 100%;
+  border: none;
+  border-radius: 5rem;
+  padding: 1.4rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}

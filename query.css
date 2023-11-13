@@ -1,0 +1,22 @@
+@media (max-width: 90em) {
+  body {
+    height: 100%;
+  }
+  .main-container {
+    min-width: 37.5rem;
+    height: 100%;
+  }
+  .container {
+    width: min-content;
+    height: min-content;
+    flex-direction: column;
+    border-radius: 0;
+    overflow: visible;
+    /* background-color: red; */
+  }
+
+  .container-summary__score {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
