@@ -52,6 +52,7 @@ body {
 
   justify-content: center;
   align-items: center;
+  /* height: 100%; */
   width: max-content;
   height: max-content;
   border-radius: 3rem;
@@ -61,7 +62,7 @@ body {
 
 .container-summary {
   width: 30rem;
-  height: 100%rem;
+  height: 100%;
   padding: 4rem;
 }
 
@@ -100,6 +101,8 @@ p {
   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   border-radius: 3rem;
   overflow: hidden;
+  display: block;
+  /* background-color: red; */
 }
 
 .container-summary__score h3 {
@@ -138,6 +141,7 @@ p {
 
 .container-summary__desc {
   background-color: var(--color-white);
+  height: min-content;
 }
 
 .container-summary__desc h3 {
@@ -152,7 +156,11 @@ p {
   border-radius: 0.6rem;
 }
 
-.summary-skill {
+.skill-box {
+  gap: 1rem;
+}
+
+.summary-desc__skill {
   font-weight: 500;
 }
 .summary-desc__score {
@@ -174,10 +182,6 @@ p {
 .box-4 {
   background-color: var(--color-bg-blue);
   color: var(--color-blue);
-}
-
-.summary-desc__skill::before {
-  content: url(`${icon}`);
 }
 
 button {
