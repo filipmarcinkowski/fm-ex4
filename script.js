@@ -2,68 +2,106 @@
 const summaryDesc = document.querySelector(".summary-desc");
 const mainStat = document.querySelector(".circle-number");
 
-// FOR LOOP
+// ForEach with 'getSkill' function
 
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("data.json")
-    .then((response) => response.json())
-    .then(function (data) {
-      for (let i = 0; i < data.length; i++) {
-        const html = `
-        <div class="summary-desc__box flex box-${i + 1}">
-        <div class="flex skill-box">
-        <img
-        class="summary-desc__icon"
-        src="${data[i].icon}"
-        />
-        <p class="summary-desc__skill">${data[i].category}</p>
-        </div>
-        <p class="summary-desc__score"><strong>${
-          data[i].score
-        }</strong> / 100</p>
-        </div>`;
+// document.addEventListener("DOMContentLoaded", function () {
+//   fetch("data.json")
+//     .then((response) => response.json())
+//     .then((data) => data.forEach(getSkill).reduce(mainStatValue, 0))
+//     .catch((err) => console.error(err));
+// });
 
-        summaryDesc.insertAdjacentHTML("beforeend", html);
-      }
-    });
-});
-
-/*
 document.addEventListener("DOMContentLoaded", function () {
   fetch("data.json")
     .then((response) => response.json())
     .then((data) => data.forEach(getSkill))
-    .catch((err) => console.error(err));
+    .catch((err) => console.error(`Coś poszło nie tak :( ${err}`));
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("data.json")
+    .then((response) => response.json())
+    .then((data) => data.reduce(totalScore, 0))
+    .then((value) => (mainStat.textContent = value / 4))
+    .catch((err) => console.error(`Coś poszło nie tak :( ${err}`));
+});
 
-const getSkill = function (data) {
+const totalScore = function (acc, cur, i, arr) {
+  return acc + cur.score;
+};
+
+const getSkill = function (data, i) {
   const html = `
-  <div class="summary-desc__box flex box-1">
-  <div class="flex skill-box">
-  <img
-  class="summary-desc__icon"
-  src="${data.icon}"
-  />
-  <p class="summary-desc__skill">${data.category}</p>
-  </div>
-  <p class="summary-desc__score"><strong>${data.score}</strong> / 100</p>
-  </div>`;
+          <div class="summary-desc__box flex box-${i + 1}">
+          <div class="flex skill-box">
+          <img
+          class="summary-desc__icon"
+          src="${data.icon}"
+          />
+          <p class="summary-desc__skill">${data.category}</p>
+          </div>
+          <p class="summary-desc__score"><strong>${
+            data.score
+          }</strong> / 100</p>
+          </div>`;
   summaryDesc.insertAdjacentHTML("beforeend", html);
 };
 
-*/
-// const currentPosition = function (arr) {
-//   const array = [];
+// mainStat.textContent = 69;
 
-//   for (let i = 0; i < arr.length; i++) {
-//     array.push(i + 1);
-//   }
-//   console.log(array);
-
-//   // array.forEach();
+// const mainStatValue = function (acc, cur, i, arr) {
+//   cur = arr[i].score;
+//   return cur + acc;
 // };
 
-// currentPosition([3, 5, 6, 7, 8, 9, 3]);
+// FOR LOOP
 
-// const length =
+// document.addEventListener("DOMContentLoaded", function () {
+//   fetch("data.json")
+//     .then((response) => response.json())
+//     .then(function (data) {
+//       for (let i = 0; i < data.length; i++) {
+//         const html = `
+//         <div class="summary-desc__box flex box-${i + 1}">
+//         <div class="flex skill-box">
+//         <img
+//         class="summary-desc__icon"
+//         src="${data[i].icon}"
+//         />
+//         <p class="summary-desc__skill">${data[i].category}</p>
+//         </div>
+//         <p class="summary-desc__score"><strong>${
+//           data[i].score
+//         }</strong> / 100</p>
+//         </div>`;
+
+//         summaryDesc.insertAdjacentHTML("beforeend", html);
+//       }
+//     });
+// });
+
+// ForEach
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   fetch("data.json")
+//     .then((response) => response.json())
+//     .then((data) =>
+//       data.forEach(function (data, i) {
+//         const html = `
+//           <div class="summary-desc__box flex box-${i + 1}">
+//           <div class="flex skill-box">
+//           <img
+//           class="summary-desc__icon"
+//           src="${data.icon}"
+//           />
+//           <p class="summary-desc__skill">${data.category}</p>
+//           </div>
+//           <p class="summary-desc__score"><strong>${
+//             data.score
+//           }</strong> / 100</p>
+//           </div>`;
+//         summaryDesc.insertAdjacentHTML("beforeend", html);
+//       })
+//     )
+//     .catch((err) => console.error(err));
+// });

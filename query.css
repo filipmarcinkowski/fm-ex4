@@ -4,7 +4,7 @@
   }
   .main-container {
     min-width: 37.5rem;
-    height: 100%;
+    height: 100vh;
   }
   .container {
     width: min-content;
