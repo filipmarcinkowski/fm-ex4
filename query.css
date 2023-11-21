@@ -1,9 +1,9 @@
-@media (max-width: 90em) {
+@media (max-width: 24em) {
   body {
     height: 100%;
   }
   .main-container {
-    min-width: 37.5rem;
+    width: 37.5rem;
     height: 100vh;
   }
   .container {
